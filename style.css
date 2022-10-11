@@ -1,0 +1,383 @@
+/* variables */
+:root {
+    font: 20px/1.2 "Roboto", sans-serif;
+    --header-width: 1300px;
+    --deep-blue: #213B7E;
+    --orange: #EA5D21;
+}
+
+/* reset default styles */
+* {
+    margin: unset;
+    padding: unset;
+    color: unset;
+}
+
+/* using body as a base flex wrapper */
+body {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* header */
+header {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: var(--header-width);
+    min-height: 80px;
+    background-color: var(--deep-blue);
+    padding: 0 15px;
+    margin-bottom: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav_menu {
+    margin-left: 97px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav_menu li {
+    color: #fff;
+    min-width: 112px;
+    margin-left: 9px;
+    list-style-type: none;
+}
+
+.nav_menu li:hover {
+    background-color: #4b83b1;
+}
+
+.nav_link {
+    height: 80px;
+    padding: 0 10px;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    color: var(--deep-blue);
+    background-color: #fff;
+}
+
+.logo {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.log_in {
+    min-width: 52px;
+    padding: 14px 52px;
+    color: #fff;
+    background-color: var(--orange);
+    font-size: 18px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 831px) {
+    header {
+        justify-content: center;
+    }
+
+    .nav_menu {
+        margin: 0 auto;
+    }
+
+    .logo {
+        min-width: 100%;
+        margin: 15px auto;
+        text-align: center;
+    }
+
+    .logo img {
+        max-height: 200px;
+    }
+
+    .log_in {
+        min-width: 200px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 675px) {
+    nav {
+        min-width: 100%;
+    }
+
+    .nav_menu {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .nav_menu li {
+        min-width: 100%;
+        margin: unset;
+        padding: 0 auto;
+    }
+
+    .nav_link {
+        height: 60px;
+    }
+}
+
+@media (max-width: 675px) {
+    .split {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .text {
+        min-width: 100%;
+    }
+
+    .quotation {
+        margin: auto;
+    }
+}
+
+@media (max-width: 540px) {
+    .img_classroom {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 340px) {
+    .log_in {
+        width: 100%;
+        margin: 10px 0;
+        padding: 14px 0;
+    }
+}
+
+/* main */
+.first_main {
+    flex: 1;
+    width: 100%;
+    max-width: 915px;
+    margin: 0 auto 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title_main {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.img_classroom {
+    margin-bottom: 12px;
+}
+
+.title_secondary {
+    font-weight: normal;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.split {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text {
+    width: 100%;
+    max-width: 650px;
+    margin-bottom: 12px;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.quotation {
+    color: rgba(0, 0, 0, .65);
+    width: 140px;
+    font-family: 'Lobster';
+    font-size: 36px;
+    line-height: 45px;
+}
+
+.text_orange {
+    font-style: italic;
+    color: var(--orange);
+}
+
+/* footer */
+footer {
+    width: 100%;
+    max-width: var(--header-width);
+    height: 60px;
+    background-color: var(--deep-blue);
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* popup window */
+.popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.visible {
+    display: flex;
+}
+
+.popup_content {
+    width: 500px;
+    height: 420px;
+    background-color: #fff;
+    margin: auto;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #888;
+    cursor: pointer;
+}
+
+.popup_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.popup_header h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.popup_form {
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.popup_form input {
+    height: 50px;
+    font-size: 23px;
+    padding-left: 10px;
+}
+
+.popup_form input[type=submit] {
+    width: 150px;
+    align-self: center;
+    font-size: 20px;
+    color: #fff;
+    background-color: var(--orange);
+    border: unset;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .popup_content {
+        width: 100%;
+    }
+}
+
+/* students page */
+.students_main {
+    flex: 1;
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.students_container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.student {
+    margin: 0 50px 20px 0;
+}
+
+.student_img {
+    min-width: 200px;
+    min-height: 270px;
+    background-color: #86C6F4;
+}
+
+.novice {
+    position: relative;
+}
+
+.novice::before {
+    position: absolute;
+    right: -7%;
+    top: -3%;
+    content: "НОВИЧОК";
+    font-size: 18px;
+    color: #fff;
+    background-color: #3AA828;
+    border-radius: 20px;
+    padding: 3px 5px;
+}
+
+.student_name {
+    text-align: center;
+    max-width: 200px;
+}
+
+/* about page */
+.video_description {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 831px) {
+    .video_preview {
+        max-width: 100%;
+    }
+}
+
+/* contacts page */
+.google_map {
+    margin: 0 0 15px -170px;
+}
+
+.telephone {
+    margin-top: 5px;
+    text-decoration: underline;
+}
+
+@media (max-width: 1281px) {
+    .google_map {
+        max-width: 100%;
+    }
+}
