@@ -10,12 +10,12 @@
 * {
     margin: unset;
     padding: unset;
-    color: unset;
 }
 
 /* using body as a base flex wrapper */
 body {
     max-width: 100%;
+    min-width: 380px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -58,6 +58,7 @@ header {
     height: 80px;
     padding: 0 10px;
     text-decoration: underline;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,26 +124,10 @@ header {
     .nav_menu li {
         min-width: 100%;
         margin: unset;
-        padding: 0 auto;
     }
 
     .nav_link {
         height: 60px;
-    }
-}
-
-@media (max-width: 675px) {
-    .split {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .text {
-        min-width: 100%;
-    }
-
-    .quotation {
-        margin: auto;
     }
 }
 
@@ -191,6 +176,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .text {
@@ -205,6 +191,7 @@ header {
 .quotation {
     color: rgba(0, 0, 0, .65);
     width: 140px;
+    margin: 0 auto;
     font-family: 'Lobster';
     font-size: 36px;
     line-height: 45px;
@@ -301,6 +288,11 @@ footer {
     cursor: pointer;
 }
 
+.popup_form input[type=email]:invalid {
+    outline: 3px solid #ff0000;
+}
+
+
 @media (max-width: 500px) {
     .popup_content {
         width: 100%;
@@ -310,12 +302,12 @@ footer {
 /* students page */
 .students_main {
     flex: 1;
-    width: 100%;
-    max-width: 1260px;
-    margin: 0 auto 50px auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto 50px auto;
 }
 
 .students_container {
@@ -324,12 +316,33 @@ footer {
 }
 
 .student {
-    margin: 0 50px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px 20px 15px;
+    padding: 10px 20px;
+    background-color: rgba(134, 244, 203, 0.322);
+}
+
+.student:nth-child(2n - 1) {
+    background-color: rgba(244, 134, 195, 0.322);
+}
+
+.student_link {
+    width: 180px;
+    text-decoration: none;
+}
+
+@media (min-width: 1150px) {
+    .student {
+        max-width: calc(100% / 2);
+    }
 }
 
 .student_img {
-    min-width: 200px;
-    min-height: 270px;
+    width: 180px;
+    min-height: 250px;
+    margin: 10px 0;
     background-color: #86C6F4;
 }
 
@@ -339,7 +352,7 @@ footer {
 
 .novice::before {
     position: absolute;
-    right: -7%;
+    right: -5%;
     top: -3%;
     content: "НОВИЧОК";
     font-size: 18px;
@@ -360,6 +373,12 @@ footer {
     margin-bottom: 15px;
 }
 
+.video_preview {
+    width: 100%;
+    min-height: 550px;
+    border: unset;
+}
+
 @media (max-width: 831px) {
     .video_preview {
         max-width: 100%;
@@ -367,17 +386,76 @@ footer {
 }
 
 /* contacts page */
+.contacts_main {
+    flex: 1;
+    width: 100%;
+    max-width: 915px;
+    margin: 0 auto 30px auto;
+}
+
 .google_map {
-    margin: 0 0 15px -170px;
+    width: 1250px;
+    height: 500px;
+    margin: 0 auto 20px auto;
+    border: 0;
 }
 
 .telephone {
     margin-top: 5px;
-    text-decoration: underline;
 }
 
-@media (max-width: 1281px) {
+address {
+    margin-bottom: 50px;
+}
+
+@media (max-width: 1300px) {
     .google_map {
+        max-width: 100%;
+    }
+}
+
+/* my page */
+.figure_left {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.figure_right {
+    float: right;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+figure>figcaption {
+    text-align: center;
+    font-style: italic;
+}
+
+.my_section {
+    margin-bottom: 40px;
+}
+
+@media (max-width: 730px) {
+    .figure_right {
+        width: 500px;
+        float: none;
+        margin: auto;
+    }
+}
+
+@media (max-width: 515px) {
+    .figure_left {
+        width: 250px;
+        float: none;
+        margin: auto;
+    }
+
+    .figure_right {
+        width: auto;
+    }
+
+    .second_pic {
         max-width: 100%;
     }
 }

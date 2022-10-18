@@ -16,7 +16,7 @@
 
     <header>
         <a href="../index.html" class="logo">
-            <img src="../img/main_logo.svg" alt="main_logo">
+            <img src="../img/main_logo.svg" alt="логотип">
         </a>
         <nav>
             <ul class="nav_menu">
@@ -29,12 +29,16 @@
         <a class="log_in" href="#">Войти</a>
     </header>
 
-    <main class="first_main">
-        <h1 class="title_main">Как нас найти</h1>
-        <img src="../img/goole-map.png" alt="video" class="google_map">
-        <h2 class="title_secondary">Наши контакты</h2>
-        <p class="text">Адрес: г. Санкт-Петербург, Дворцовая пл., 2, 190000</p>
-        <p class="telephone">Тел: +7 (812) 555-55-55</p>
+    <main>
+        <h1 class="title_main contacts_main">Как нас найти</h1>
+        <iframe class="google_map"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d65678.45766903418!2d104.2991171829635!3d52.2867977164467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1665890467587!5m2!1sru!2sru"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <address class="contacts_main">
+            <h2 class="title_secondary">Наши контакты</h2>
+            <p class="text">Адрес: г. Иркутск, ул. Валерия Жмышенко, 54, 1488228</p>
+            <a class="telephone" href="tel:+78005553535">Тел: 8 (800) 555-35-35</a>
+        </address>
     </main>
 
     <footer>
@@ -49,8 +53,8 @@
             </div>
 
             <form action="" class="popup_form">
-                <input type="text" placeholder="Логин">
-                <input type="text" placeholder="Пароль">
+                <input type="email" placeholder="Логин">
+                <input type="password" placeholder="Пароль">
                 <input type="submit" value="Войти">
             </form>
         </div>
